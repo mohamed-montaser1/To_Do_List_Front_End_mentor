@@ -6,36 +6,41 @@ import axios from "axios";
 
 function Output() {
   const [data, setData] = useState([]);
+  useEffect(() => {
+    if (document.body.dataset.status === "all") {
+      async function getAllTasks() {
+        const res = await axios.get(`${apiUrl}/all`);
+        const allTasks = res.data.allTasks;
+        setData(allTasks);
+      }
+
+      getAllTasks();
+    }
+  }, [document.body.dataset.status, data]);
 
   useEffect(() => {
-    async function getAllTasks() {
-      const res = await axios.get(`${apiUrl}/all`);
-      const allTasks = res.data.allTasks;
-      setData(allTasks);
-    }
+    if (document.body.dataset.status === "complated") {
+      async function getComplated() {
+        const res = await axios.get(`${apiUrl}/complated`);
+        const data = res.data.allTasks;
+        setData(data);
+      }
 
-    getAllTasks();
-  }, [data]);
+      getComplated();
+    }
+  }, [document.body.dataset.status, data]);
 
   useEffect(() => {
-    async function getComplated() {
-      const res = await axios.get(`${apiUrl}/complated`);
-      const data = res.data;
-      // console.log(data);
+    if (document.body.dataset.status === "active") {
+      async function getActive() {
+        const res = await axios.get(`${apiUrl}/active`);
+        const data = res.data.allTasks;
+        setData(data);
+      }
+
+      getActive();
     }
-
-    getComplated();
-  }, []);
-
-  useEffect(() => {
-    async function getActive() {
-      const res = await axios.get(`${apiUrl}/active`);
-      const data = res.data;
-      // console.log(data);
-    }
-
-    getActive();
-  }, []);
+  }, [document.body.dataset.status, data]);
 
   return (
     <>

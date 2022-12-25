@@ -25,21 +25,15 @@ function Filter() {
     }, 100);
   };
   const AllHandler = () => {
-    document.body.dataset.all = true;
-    document.body.dataset.active = false;
-    document.body.dataset.complated = false;
+    document.body.dataset.status = "all";
   };
 
   const activeHandler = () => {
-    document.body.dataset.active = true;
-    document.body.dataset.complated = false;
-    document.body.dataset.all = false;
+    document.body.dataset.status = "active";
   };
 
   const ComplatedHandler = () => {
-    document.body.dataset.complated = true;
-    document.body.dataset.active = false;
-    document.body.dataset.all = false;
+    document.body.dataset.status = "complated";
   };
 
   return (
