@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  --el-color-dark: hsl(235, 24%, 19%);
+  --el-color-light: hsl(236, 33%, 92%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: hsl(235, 21%, 11%);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+body.light {
+  background-color: hsl(0, 0%, 98%);
+}

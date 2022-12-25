@@ -1,0 +1,19 @@
+.container {
+  width: 500px;
+  min-height: 68vh;
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}

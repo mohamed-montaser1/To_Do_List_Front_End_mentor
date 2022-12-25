@@ -1,0 +1,58 @@
+.filter {
+  background-color: var(--el-color-dark);
+  border-radius: 0 0 8px 8px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+body.light .filter {
+  background-color: var(--el-color-light);
+}
+
+.items-left {
+  color: white;
+}
+
+body.light .items-left {
+  color: hsl(236, 9%, 61%);
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-list li {
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+body.light .filter-list li {
+  color: hsl(236, 9%, 61%);
+}
+
+.filter-list li.active,
+body.light .filter-list li.active {
+  color: hsl(220, 98%, 61%);
+}
+
+.filter-list li:hover,
+body.light .filter-list li:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+button {
+  color: white;
+  cursor: pointer;
+}
+
+body.light button {
+  color: hsl(236, 9%, 61%);
+}

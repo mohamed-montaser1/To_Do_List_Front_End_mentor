@@ -1,0 +1,45 @@
+li {
+  border-bottom: 1px solid hsl(236, 9%, 61%);
+  font-size: 20px;
+  padding: 20px 0;
+  color: white;
+  display: flex;
+}
+
+.circle {
+  flex-basis: 10%;
+}
+
+.text-container {
+  flex-basis: 90%;
+  position: relative;
+}
+
+p.text {
+  width: fit-content;
+  position: relative;
+}
+
+body.light li {
+  color: hsl(235, 19%, 35%);
+}
+
+.c-true .circle-el {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.c-true + .text-container p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  border-radius: 5px;
+  background-color: hsl(235, 21%, 11%);
+}
+
+.c-true + .text-container p {
+  opacity: 0.8;
+}

@@ -1,0 +1,10 @@
+.output-list {
+  background-color: var(--el-color-dark);
+  margin: 30px 0 0;
+  border-radius: 8px 8px 0 0;
+  list-style: none;
+}
+
+body.light .output-list {
+  background-color: var(--el-color-light);
+}

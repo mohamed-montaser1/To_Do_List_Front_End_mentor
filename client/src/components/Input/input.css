@@ -1,0 +1,40 @@
+.input-container {
+  background-color: var(--el-color-dark);
+  height: 3rem;
+  border-radius: 8px;
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body.light .input-container {
+  background-color: var(--el-color-light);
+}
+.circle {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+input {
+  flex-basis: 90%;
+  border-radius: 8px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: hsl(234, 39%, 85%);
+}
+
+body.light input {
+  color: hsl(235, 19%, 35%);
+}
+
+.circle-el {
+  width: 20px;
+  height: 20px;
+  border: 1px solid hsl(234, 11%, 52%);
+  border-radius: 50%;
+}
