@@ -14,6 +14,6 @@ app.use("/api", mainRoute);
 app.listen(port, () => {
   console.log(`Listen At Localhost:${port}`);
 });
-mongoose.connect("mongodb://localhost:27017/todolist-frontendmentor", () => {
+mongoose.connect("mongodb+srv://mohamed-montaser:mo7a_montaser@to-do-list.qvtaays.mongodb.net/todolist-mern-stack", () => {
   console.log("connected");
 });
