@@ -11,7 +11,7 @@ li {
 }
 
 .text-container {
-  flex-basis: 90%;
+  flex-basis: 80%;
   position: relative;
 }
 
@@ -42,4 +42,16 @@ body.light li {
 
 .c-true + .text-container p {
   opacity: 0.8;
+}
+
+.close {
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+li:hover .close {
+  opacity: 1;
+  pointer-events: all;
 }

@@ -19,6 +19,11 @@ body {
   transition: all 0.3s ease;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }

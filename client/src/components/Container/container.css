@@ -1,5 +1,6 @@
 .container {
   width: 500px;
+  max-width: 95%;
   min-height: 68vh;
   position: absolute;
   top: 10rem;

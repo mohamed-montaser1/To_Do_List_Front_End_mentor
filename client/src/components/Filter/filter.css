@@ -56,3 +56,11 @@ button {
 body.light button {
   color: hsl(236, 9%, 61%);
 }
+
+@media (max-width: 421px) {
+  .filter p,
+  .filter-list li,
+  .filter button {
+    font-size: 10px;
+  }
+}

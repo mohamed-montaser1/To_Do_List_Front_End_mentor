@@ -6,6 +6,7 @@ import apiUrl from "../../services/api_url";
 
 function Filter() {
   const [data, setData] = useState([]);
+  const allFilters = useRef([]);
   const filterCount = useRef(null);
   useEffect(() => {
     async function getNotcomplatedTasks() {
@@ -19,10 +20,7 @@ function Filter() {
   }, [data]);
 
   const clearAllComplated = async () => {
-    const res = await axios.delete(`${apiUrl}`);
-    setTimeout(() => {
-      alert(res.data.message);
-    }, 100);
+    await axios.delete(`${apiUrl}`);
   };
   const AllHandler = () => {
     document.body.dataset.status = "all";
@@ -35,7 +33,18 @@ function Filter() {
   const ComplatedHandler = () => {
     document.body.dataset.status = "complated";
   };
+  useEffect(() => {
+    let arrOfEl = document.querySelectorAll(".filter-list li");
 
+    arrOfEl.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        arrOfEl.forEach((el) => {
+          el.classList.remove("active");
+        });
+        e.target.classList.add("active");
+      });
+    });
+  }, []);
   return (
     <>
       <div className="filter">

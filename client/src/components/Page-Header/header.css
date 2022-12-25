@@ -11,3 +11,13 @@
 body.light .header {
   background-image: url("../../images/bg-desktop-light.jpg");
 }
+
+@media (max-width: 500px) {
+  .header {
+    background-image: url("../../images/bg-mobile-dark.jpg");
+  }
+
+  body.light .header {
+    background-image: url("../../images/bg-mobile-light.jpg");
+  }
+}
